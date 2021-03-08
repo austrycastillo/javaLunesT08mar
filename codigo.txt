@@ -1,0 +1,79 @@
+ //aquí siempre vamos a trabajar
+        /*
+       variables de tipo entero
+       byte, short, int, long
+       decimales
+       float, double
+       1- declarar la variable (una sola vez)
+       tipo identificador;
+       2- inicializar la variable
+       identificador = valor;
+        podemos realizar paso 1 y 2 al mismo tiempo
+       tipo identificador = valor;
+         */
+        System.out.println("Hola Mundo");
+        byte edad = 19;
+        System.out.println("");
+        System.out.println(edad);
+        edad = 100;
+        System.out.println(edad);
+        short stock = 5600;
+        System.out.println(stock);
+        int dni = 12345678;
+        System.out.println(dni);
+        double numero1 = 2.20;
+        System.out.println(numero1);
+        float numero2 = 4.10f;
+        System.out.println(numero2);
+        boolean resultado = true;//false
+        System.out.println(resultado);
+        String nombre = "Austry";
+        System.out.println(nombre);
+        char text = 'p';
+        //concatenar +
+        System.out.println("Mi edad es " + edad + " mi nombre es "
+                + nombre);
+        //operadores aritmeticos + - * / %(modulo)
+        System.out.println("La suma es " + (2 + 5));
+        int a = 20, b = 15;
+        System.out.println(a - b);
+        int total = a * b;
+        System.out.println(total);
+        System.out.println(5 % 2);//retorna el resto de la división
+        a += 5; // a = a + 5;  -= *= /= %=
+        b++; // b = b + 1; b--
+        //operadores comparativos < > <= >= == !=
+        System.out.println(a > b);
+        System.out.println(a != b);
+        /*operadores lógicos and(&&)(&) or(||)(|)
+        tabla de la verdad
+        TRUE && TRUE = TRUE
+        TRUE && FALSE = FALSE
+        FALSE && TRUE = FALSE
+        FALSE && FALSE = FALSE
+        
+        FALSE || FALSE = FALSE
+        FALSE || TRUE = TRUE
+        TRUE || FALSE = TRUE
+        TRUE || TRUE = TRUE
+        */
+        boolean c = true, d = false;
+        System.out.println(c || d);
+        System.out.println(c && d);
+        System.out.println(c & d);// verifica todos los lados
+        //LABORATORIOS
+        System.out.println("*****A");
+        //int x = 10,y = 20;
+        int x = 10;
+        int y = 20;
+        System.out.println(x);
+        System.out.println(y);
+        x+=5; //x = x + 5;
+        y-=15; //y= y - 15;
+        String palabra1 = "Hola ";
+        String palabra2= "mundo";
+        String frase = "";
+        frase = palabra1 + palabra2;
+        System.out.println(frase);
+        boolean t = true;
+        System.out.println(!t);//negación
