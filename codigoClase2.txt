@@ -1,0 +1,178 @@
+package lunestclase2;
+
+import java.util.Scanner;
+
+public class LunesTclase2 {
+
+    public static void main(String[] args) {
+        /*
+        if(condición){
+            ..instrucciones..
+        }else{
+            ..instrucciones..
+        }
+        ///if anidado
+        if(condición){
+            ..instrucciones..
+        }else if(condición){
+            ..instrucciones..
+        }else if(condición){
+            ..instrucciones..
+        }else{
+            ..instrucciones..
+        }
+         */
+
+//        int x = 2;
+//        if (x > 0) {
+//            System.out.println("Es positivo");
+//        } else {
+//            System.out.println("Es negativo");
+//
+//        }
+
+        /*
+crear 3 variables, verificar los pares
+y sumarlos
+         */
+//        int x = 2, y = 3, z = 4, suma = 0;
+//        if (x % 2 == 0) {
+//            System.out.println(x + " es par");
+//            suma += x;//suma = suma + x;
+//        }
+//        if (y % 2 == 0) {
+//            System.out.println(y + " es par");
+//            suma += y;
+//        }
+//        if (z % 2 == 0) {
+//            System.out.println(z + " es par");
+//            suma += z;
+//        }
+//        System.out.println("El resultado de la suma es " + suma);
+
+        /*
+tenemos un número y tenemos que determinar si tiene
+1,2,3 o 4 cifras
+
+         */
+        Scanner teclado = new Scanner(System.in);
+//        System.out.println("Escribe un número");
+//        int numero = teclado.nextInt();
+//        if(numero >0 && numero < 10){
+//            System.out.println("Tiene una sola cifra");
+//        }else if(numero>=10 && numero<100){
+//            System.out.println("Tiene dos cifras");
+//        }else if(numero>=100 && numero <1000){
+//            System.out.println("Tiene tres cifras");
+//        }else if(numero>=1000 && numero <10000){
+//            System.out.println("Tiene cuatro cifras");
+//        }else{
+//            System.out.println("No corresponde");
+//        }
+
+        /*
+boliche solo para un rango de 18 a 28
+22 años una bebida gratis
+si no puedes pasar decir la razón
+
+         */
+//        System.out.println("Dime tu edad");
+//        int edad = teclado.nextInt();
+//        if(edad >=18 && edad <=28){
+//            System.out.println("Bienvenidos ;)");
+//            if(edad==22){
+//                System.out.println("Ganaste una bebida!"); 
+//            }
+//        }else{
+//            System.out.println("No puedes pasar ;(");
+//            if(edad<18){
+//                System.out.println("por bebito");
+//            }else{
+//                System.out.println("por viejito");
+//            }
+//        }
+/*
+switch(variable){
+    case valor:
+        ...instrucciones
+        break;
+    case valor2:
+        ...instrucciones
+        break;
+    default:
+    ..instrucciones
+    break;
+}
+         */
+//        String dia = "lunes";
+//        switch (dia) {
+//            case "domingo":
+//                System.out.println("Hoy es domingo de descanso");
+//                break;
+//            case "lunes":
+//            case "LUNES":
+//                System.out.println("Hoy es lunes de helado");
+//                break;
+//            case "martes":
+//                System.out.println("Hoy es martes de asado");
+//                break;
+//            case "miércoles":
+//                System.out.println("Hoy es miércoles de mitades");
+//                break;
+//            case "jueves":
+//                System.out.println("Hoy es jueves de ensalada");
+//                break;
+//            case "viernes":
+//                System.out.println("Hoy es viernes de vinos");
+//                break;
+//            default:
+//                System.out.println("Puede ser sábado!");
+//                break;
+//        }
+        /*
+CAJERO AUTOMÁTICO: 1 consulta, 2 depósito, 3 retiro
+
+         */
+        System.out.println("****BANCO BANQUIN***\nEscribe tu clave");
+        int clave = teclado.nextInt();
+        double saldo = 500.2, monto = 0;
+        if (clave == 123) {
+            System.out.println("Escribe la opción a realizar:\n"
+                    + "\t1 consulta\n\t2 depósito\n\t3 retiro\n\t4 salir");
+            int opcion = teclado.nextInt();
+            switch (opcion) {
+                case 1://consulta
+                    System.out.println("Tu saldo es: " + saldo);
+                    break;
+                case 2://depósito
+                    System.out.println("Escribe el monto a depositar");
+                    monto = teclado.nextDouble();
+                    saldo += monto;//saldo = saldo + monto;
+                    System.out.println("Depósito realizado correctamente\n"
+                            + " su saldo actualizado es " + saldo);
+                    break;
+                case 3://retiro
+                    System.out.println("Escribe el monto a retirar");
+                    monto = teclado.nextDouble();
+                    if (saldo > monto) {
+                        saldo -= monto;
+                        System.out.println("Retiro realizado correctamente\n"
+                                + " su salo actualizado es " + saldo);
+                    } else {
+                        System.out.println("Saldo insuficiente");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Regrese pronto adiossssss");
+                    break;
+                default:
+                    System.out.println("No existe la Opción");
+                    break;
+
+            }
+        } else {
+            System.out.println("Datos de acceso incorrectos");
+        }
+    }
+
+}
